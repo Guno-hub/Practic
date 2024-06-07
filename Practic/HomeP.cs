@@ -49,8 +49,8 @@ namespace Practic
 
             using (DataBaseContext context = new DataBaseContext())
             {
-                var newOrder = new User { Name = name, Order = order, DateD =  datad };
-                context.Set<User>().Add(newOrder);
+                var newZapisy = new Zapis { Name = name, Order = order, DateD =  datad };
+                context.Set<Zapis>().Add(newZapisy);
                 context.SaveChanges();
                 MessageBox.Show("Запись создана");
             }

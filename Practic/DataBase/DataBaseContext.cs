@@ -16,11 +16,15 @@ namespace Practic
         }
 
         public DbSet<User> Users { get; set; }
+        public DbSet<Zapis> Zapisy { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<User>().ToTable("Users");
+
+            base.OnModelCreating(modelBuilder);
+            modelBuilder.Entity<Zapis>().ToTable("Zapisss");
         }
     }
 }

@@ -16,7 +16,7 @@ namespace Practic
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new HomeP());
+            Application.Run(new Вход());
         }
     }
 }

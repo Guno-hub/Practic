@@ -10,12 +10,13 @@ namespace Practic.DataBase
 {
     public class DataTest : DbContext
     {
+        public DbSet<Zapis> Zapisy { get; set; }
+
         public DataTest() : base("DBConnection")
         {
             this.Database.Log = Console.Write;
         }
-        public DbSet<Zapis> Zapisy { get; set; }
-
+      
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

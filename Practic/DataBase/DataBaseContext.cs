@@ -10,12 +10,12 @@ namespace Practic
 {
     public class DataBaseContext : DbContext
     {
+        public DbSet<User> Users { get; set; }
+
         public DataBaseContext() : base("DBConnection")
         {
             this.Database.Log = Console.Write;
         }
-
-        public DbSet<User> Users { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -76,5 +76,19 @@ namespace Practic
 
         }
 
+        private void checkBox1_CheckedChanged(object sender, EventArgs e) ///Показ пароля или нет
+        {
+            if (checkBox1.Checked)
+            {
+                textBox1.PasswordChar = '\0';
+                textBox2.PasswordChar = '\0';
+            }
+            else
+            {
+                textBox1.PasswordChar = '*';
+                textBox2.PasswordChar = '*';
+
+            }
+        }
     }
 }

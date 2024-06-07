@@ -14,6 +14,7 @@ namespace Practic
     }
     public class Zapis
     {
+        public long Id { get; set; }
         public string Name { get; set; }
         public string Order { get; set; }
         public string DateD { get; set; }

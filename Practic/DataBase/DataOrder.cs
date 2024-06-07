@@ -1,26 +1,25 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
-using System.Runtime.Remoting.Contexts;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.Entity;
+using System.Runtime.Remoting.Contexts;
 
-namespace Practic
+namespace Practic.DataBase
 {
-    public class DataBaseContext : DbContext
+    public class DataTest : DbContext
     {
-        public DataBaseContext() : base("DBConnection")
+        public DataTest() : base("DBConnection")
         {
             this.Database.Log = Console.Write;
         }
-
-        public DbSet<User> Users { get; set; }
+        public DbSet<Zapis> Zapisy { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-            modelBuilder.Entity<User>().ToTable("Users");
+            modelBuilder.Entity<Zapis>().ToTable("Zapisy");
         }
     }
 }

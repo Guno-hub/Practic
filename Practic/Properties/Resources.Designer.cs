@@ -63,6 +63,16 @@ namespace Practic.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_выход_32 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-выход-32", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Logo_64 {
             get {
                 object obj = ResourceManager.GetObject("Logo 64", resourceCulture);
